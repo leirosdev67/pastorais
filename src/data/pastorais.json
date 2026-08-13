@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Pastoral da Criança",
+    "category": "Social",
+    "description": "Acompanha crianças de 0 a 6 anos e gestantes em ações básicas de saúde, nutrição, educação e cidadania, promovendo o desenvolvimento integral e a melhoria da qualidade de vida das famílias.",
+    "coordinators": "Maria Silva e João Santos",
+    "contact": "(11) 98765-4321 / pastoralcriança@igreja.com.br",
+    "image": "/images/pastoral_crianca.png",
+    "logo": "/images/logo_crianca.png"
+  },
+  {
+    "id": "2",
+    "name": "Pastoral da Juventude",
+    "category": "Jovem",
+    "description": "Espaço de formação, integração e vivência cristã para jovens da nossa paróquia. Realizamos encontros dinâmicos, retiros, ações sociais e momentos de espiritualidade voltados à juventude.",
+    "coordinators": "Pedro Oliveira e Amanda Costa",
+    "contact": "(11) 97654-3210 / pj@igreja.com.br",
+    "image": "/images/pastoral_juventude.png",
+    "logo": "/images/logo_juventude.png"
+  },
+  {
+    "id": "3",
+    "name": "Pastoral da Liturgia",
+    "category": "Litúrgica",
+    "description": "Organiza e prepara as celebrações litúrgicas da paróquia. Atua na formação de leitores, ministros extraordinários da comunhão, acólitos, coroinhas e equipe de canto para enriquecer nossas celebrações.",
+    "coordinators": "Carlos Alberto",
+    "contact": "(11) 96543-2109 / liturgia@igreja.com.br",
+    "image": "/images/pastoral_liturgia.png",
+    "logo": ""
+  },
+  {
+    "id": "4",
+    "name": "Pastoral Familiar",
+    "category": "Familiar",
+    "description": "Oferece apoio e formação para as famílias em todas as etapas da vida. Desenvolve cursos de noivos, acompanhamento para recém-casados, encontros de casais e suporte espiritual para desafios familiares.",
+    "coordinators": "Roberto e Sandra Carvalho",
+    "contact": "(11) 95432-1098 / familiar@igreja.com.br",
+    "image": "/images/pastoral_familiar.png",
+    "logo": ""
+  },
+  {
+    "id": "1782138554294",
+    "name": "Pastoral do Esporte",
+    "category": "Social",
+    "description": "",
+    "coordinators": "Lucas Melo ",
+    "contact": "(84)99609-8049",
+    "image": "/uploads/1784052816033_img_9c7hkst.jpg",
+    "logo": ""
+  },
+  {
+    "id": "1784052928522",
+    "name": "PPH - Pastoral da Promoção Humana",
+    "category": "Geral",
+    "description": "A Pastoral da Promoção Humana atua no resgate da dignidade e na assistência a famílias em vulnerabilidade social. Suas ações baseiam-se nos pilares do acolhimento, acompanhamento e caridade, realizando a distribuição de cestas básicas, roupas e auxílio emergencial, em sintonia com as diretrizes da Igreja.",
+    "coordinators": "Marcus Arruda",
+    "contact": "(84)99609-8049",
+    "image": "/uploads/1784052967963_img_uffeax4.jpg",
+    "logo": ""
+  },
+  {
+    "id": "1784053050476",
+    "name": "Pastoral da Música",
+    "category": "Geral",
+    "description": "A Pastoral da Música é o grupo responsável por orientar os ministérios de música e corais a elevarem as orações a Deus durante a Santa Missa. Sua principal missão é animar a assembleia, promovendo uma vivência profunda dos mistérios celebrados e garantindo que o canto esteja a serviço da liturgia.",
+    "coordinators": "Robbinho / Evaristo",
+    "contact": "",
+    "image": "/uploads/1784053050473_img_xcdggvj.jpg",
+    "logo": ""
+  }
+]
