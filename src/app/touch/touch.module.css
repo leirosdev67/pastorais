@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 3rem 2rem 5rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -55,7 +55,8 @@
   margin-bottom: 3rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
-  scrollbar-width: none; /* Hide scrollbar for clean touch feel */
+  scrollbar-width: none;
+  /* Hide scrollbar for clean touch feel */
   animation: fadeIn 0.7s ease-out;
 }
 
@@ -76,7 +77,8 @@
   white-space: nowrap;
 }
 
-.filterBtn:hover, .activeFilter {
+.filterBtn:hover,
+.activeFilter {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
@@ -108,7 +110,8 @@
 }
 
 .cardActive {
-  transform: scale(0.98); /* Tactile feedback on tap */
+  transform: scale(0.98);
+  /* Tactile feedback on tap */
 }
 
 .cardImageWrapper {
@@ -120,7 +123,7 @@
 
 .cardImage {
   width: 100%;
-  height: 100%;
+  height: 110%;
   object-fit: cover;
   transition: var(--transition-smooth);
 }
@@ -193,20 +196,21 @@
   backdrop-filter: blur(8px);
   z-index: 100;
   display: flex;
-  align-items: flex-end; /* Slide up from bottom on mobile, center on desktop */
+  align-items: flex-end;
+  /* Slide up from bottom on mobile, center on desktop */
   justify-content: center;
   animation: fadeIn 0.3s ease-out;
 }
 
 .modalContent {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   background: #0d0f1a;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   border: 1px solid var(--glass-border);
   border-bottom: none;
-  max-height: 90vh;
+  max-height: 96vh;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -214,19 +218,24 @@
 }
 
 @keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .modalHero {
-  height: 320px;
+  height: 400px;
   width: 100%;
   position: relative;
 }
 
 .modalHeroImage {
   width: 100%;
-  height: 100%;
+  height: 110%;
   object-fit: cover;
 }
 
@@ -237,7 +246,7 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(0deg, #0d0f1a 0%, transparent 60%),
-              linear-gradient(180deg, rgba(13, 15, 26, 0.5) 0%, transparent 30%);
+    linear-gradient(180deg, rgba(13, 15, 26, 0.5) 0%, transparent 30%);
 }
 
 .closeBtn {
@@ -287,7 +296,8 @@
   margin-top: -0.5rem;
 }
 
-.modalDescSection h4, .modalInfoSection h4 {
+.modalDescSection h4,
+.modalInfoSection h4 {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -350,10 +360,11 @@
   animation: spin 1s linear infinite;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 800px) {
   .modalOverlay {
     align-items: center;
   }
+
   .modalContent {
     border-radius: 30px;
     border: 1px solid var(--glass-border);
@@ -365,18 +376,22 @@
   .container {
     padding: 1.5rem 1rem;
   }
+
   .header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     margin-bottom: 2rem;
   }
+
   .titleSection h1 {
     font-size: 2rem;
   }
+
   .modalBody {
     padding: 2rem 1.5rem;
   }
+
   .modalTitle {
     font-size: 2rem;
   }

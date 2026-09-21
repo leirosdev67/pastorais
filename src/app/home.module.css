@@ -23,14 +23,15 @@
   transition: max-width 0.3s ease;
 }
 
-@media (min-width: 521px) {
+@media (min-width: 550px) {
   .viewportWrapper {
     padding: 16px;
   }
+
   .mobileContainer {
     height: 94vh;
     height: 94dvh;
-    max-height: 920px;
+    max-height: 980px;
     border-radius: 36px;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -105,7 +106,8 @@
   transition: var(--transition-fast);
 }
 
-.menuToggleBtn:hover, .menuToggleBtn:active {
+.menuToggleBtn:hover,
+.menuToggleBtn:active {
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
@@ -174,10 +176,10 @@
 
 .heroPhotoBlur {
   position: absolute;
-  top: -15%;
-  left: -15%;
+  top: -05%;
+  left: -05%;
   width: 130%;
-  height: 130%;
+  height: 150%;
   object-fit: cover;
   filter: blur(28px) brightness(0.4);
   transform: scale(1.15);
@@ -189,7 +191,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Preserves natural image aspect ratio without stretching or cropping */
+  object-fit: contain;
+  /* Preserves natural image aspect ratio without stretching or cropping */
   object-position: center;
   z-index: 2;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
@@ -327,8 +330,8 @@
 }
 
 .pastoralLogoWrapper {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -558,7 +561,8 @@
   transition: var(--transition-fast);
 }
 
-.menuLinkItem:hover, .menuLinkItem:active {
+.menuLinkItem:hover,
+.menuLinkItem:active {
   background: rgba(99, 102, 241, 0.15);
   border-color: rgba(99, 102, 241, 0.3);
 }
@@ -596,7 +600,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Landscape orientation for phones/totems */
@@ -605,21 +611,25 @@
     height: 100dvh;
     padding: 0;
   }
+
   .mobileContainer {
     max-width: 100%;
-    height: 100dvh;
+    height: 110dvh;
     max-height: none;
     border-radius: 0;
     border: none;
   }
+
   .mainView {
     flex-direction: row;
   }
+
   .heroPhotoWrapper {
     width: 45%;
     height: 100%;
     max-height: none;
   }
+
   .infoSheet {
     width: 55%;
     height: 100%;
@@ -629,12 +639,13 @@
     border-left: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
+
 /* Tablet and Desktop Responsiveness */
 @media (min-width: 768px) {
   .mobileContainer {
-    max-width: 720px;
-    height: 92vh;
-    height: 92dvh;
+    max-width: 820px;
+    height: 96vh;
+    height: 96dvh;
   }
 }
 
@@ -643,9 +654,10 @@
     justify-content: center;
     padding: 24px;
   }
+
   .mobileContainer {
-    max-width: 800px;
-    height: 90vh;
-    height: 90dvh;
+    max-width: 900px;
+    height: 96vh;
+    height: 96dvh;
   }
 }
