@@ -174,12 +174,21 @@ export default function MobilePastoralHome() {
         ) : (
           /* Main Mobile Presentation */
           <main className={styles.mainView}>
-            {/* Upper Section: Photo on Top */}
+            {/* Upper Section: Responsive Photo on Top */}
             <div
               className={styles.heroPhotoWrapper}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >
+              {/* Blurred ambient background to fit any screen size without distortion */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={currentPastoral.image || '/images/default.jpg'}
+                alt=""
+                aria-hidden="true"
+                className={styles.heroPhotoBlur}
+              />
+              {/* Main crisp image, preserved in its natural aspect ratio */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 key={currentPastoral.id}

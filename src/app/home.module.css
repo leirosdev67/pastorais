@@ -6,11 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .mobileContainer {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   height: 100vh;
   height: 100dvh;
   background-color: #0d101d;
@@ -19,12 +20,17 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8), 0 0 100px rgba(99, 102, 241, 0.1);
+  transition: max-width 0.3s ease;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 521px) {
+  .viewportWrapper {
+    padding: 16px;
+  }
   .mobileContainer {
     height: 94vh;
     height: 94dvh;
+    max-height: 920px;
     border-radius: 36px;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -42,6 +48,7 @@
   -webkit-backdrop-filter: blur(20px);
   z-index: 10;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
 }
 
 .brand {
@@ -60,6 +67,7 @@
   justify-content: center;
   color: #fff;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+  flex-shrink: 0;
 }
 
 .brandText {
@@ -113,6 +121,7 @@
   background: rgba(13, 16, 29, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 9;
+  flex-shrink: 0;
 }
 
 .chipsNav::-webkit-scrollbar {
@@ -150,25 +159,41 @@
   position: relative;
 }
 
-/* Photo on Top (Hero) */
+/* Photo on Top (Hero) - Adaptive & Never Stretched */
 .heroPhotoWrapper {
   position: relative;
   width: 100%;
-  height: 42%;
-  min-height: 220px;
-  max-height: 320px;
-  background: #000;
+  height: clamp(210px, 38vh, 340px);
+  background: #080a14;
   overflow: hidden;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroPhotoBlur {
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+  object-fit: cover;
+  filter: blur(28px) brightness(0.4);
+  transform: scale(1.15);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .heroPhoto {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Preserves natural image aspect ratio without stretching or cropping */
   object-position: center;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-  animation: fadeIn 0.4s ease-out;
+  z-index: 2;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  animation: fadeIn 0.35s ease-out;
 }
 
 .heroOverlayTop {
@@ -572,4 +597,35 @@
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* Landscape orientation for phones/totems */
+@media (max-height: 520px) and (orientation: landscape) {
+  .viewportWrapper {
+    height: 100dvh;
+    padding: 0;
+  }
+  .mobileContainer {
+    max-width: 100%;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    border: none;
+  }
+  .mainView {
+    flex-direction: row;
+  }
+  .heroPhotoWrapper {
+    width: 45%;
+    height: 100%;
+    max-height: none;
+  }
+  .infoSheet {
+    width: 55%;
+    height: 100%;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+  }
 }
