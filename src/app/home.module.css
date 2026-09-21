@@ -629,3 +629,23 @@
     border-left: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
+/* Tablet and Desktop Responsiveness */
+@media (min-width: 768px) {
+  .mobileContainer {
+    max-width: 720px;
+    height: 92vh;
+    height: 92dvh;
+  }
+}
+
+@media (min-width: 1025px) {
+  .viewportWrapper {
+    justify-content: center;
+    padding: 24px;
+  }
+  .mobileContainer {
+    max-width: 800px;
+    height: 90vh;
+    height: 90dvh;
+  }
+}
