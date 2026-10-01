@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabaseClient';
 
+export const dynamic = 'force-dynamic';
+
 // Helper: upload file to Supabase Storage and return public URL
 async function uploadToStorage(file, prefix = 'img') {
   const fileExtension = file.name.split('.').pop();
