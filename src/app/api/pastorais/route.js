@@ -19,6 +19,9 @@ async function uploadToStorage(file, prefix = 'img') {
 
   if (error) {
     console.error('Storage upload error:', error);
+    if (error.message && (error.message.includes('not found') || error.message.includes('Bucket'))) {
+      throw new Error('O bucket "pastorais-images" não foi criado no Supabase Storage. Crie o bucket público "pastorais-images" no painel do Supabase.');
+    }
     throw new Error('Erro ao fazer upload da imagem: ' + error.message);
   }
 
